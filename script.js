@@ -1,4 +1,4 @@
-(async function () {
+async function loadWidget() {
     try {
       const response = await fetch("https://embed2.vercel.app/api/handler");
       const { html, css } = await response.json();
@@ -17,4 +17,6 @@
     } catch (error) {
       console.error("Error loading widget:", error);
     }
-  })();
+  }
+
+  export { loadWidget }
